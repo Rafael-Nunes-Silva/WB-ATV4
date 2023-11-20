@@ -1,0 +1,14 @@
+.custom-select {
+    background-color: white;
+
+    margin: 0px 5px 5px 5px;
+    padding: 0px;
+
+    max-width: 100%;
+
+    font-size: 18px;
+}
+
+.custom-select-option {
+    padding: 3px;
+}
