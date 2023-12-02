@@ -10,7 +10,7 @@ function Cadastrar(nome, nomeSocial, genero, CPFNumero, CPFDataEmissao, RGs, tel
         genero,
         APICPF.NovoCPF(CPFNumero, new Date(CPFDataEmissao)),
         RGs,
-        Date.now(),
+        new Date().toLocaleDateString(),
         telefones,
         produtos,
         servicos
@@ -85,7 +85,8 @@ export default function CadastroCliente() {
     }
 
     return (
-        <form onSubmit={HandleSubmit} className="form">
+        // <form onSubmit={HandleSubmit} className="form">
+        <form className="form">
             <div className="form-horizontal-div">
                 <div className="form-vertical-div">
                     <label for="nome">Nome</label>
@@ -215,7 +216,7 @@ export default function CadastroCliente() {
             <div className="form-horizontal-div">
                 {
                     !cpfInvalido &&
-                    <button type="submit" className="sec-button">Cadastrar</button>
+                    <button type="submit" onClick={HandleSubmit} className="sec-button">Cadastrar</button>
                 }
             </div>
         </form>
